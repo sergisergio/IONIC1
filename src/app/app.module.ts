@@ -6,15 +6,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {AppareilsPage} from "../pages/appareils/appareils";
-import {SingleAppareilPage} from "../pages/appareils/single-appareil/single-appareil";
+import {AppareilsPage} from '../pages/appareils/appareils';
+import {SingleAppareilPage} from '../pages/appareils/single-appareil/single-appareil';
+import {SettingsPage} from '../pages/settings/settings';
+import {TabsPage} from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     AppareilsPage,
-    SingleAppareilPage
+    SingleAppareilPage,
+    SettingsPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import {SingleAppareilPage} from "../pages/appareils/single-appareil/single-appa
     MyApp,
     HomePage,
     AppareilsPage,
-    SingleAppareilPage
+    SingleAppareilPage,
+    SettingsPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
