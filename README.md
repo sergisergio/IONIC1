@@ -27,6 +27,17 @@ ionic serve
 ```
 Go to http://localhost:8100
 
+## Structure
+
+- node_modules = Angular, Ionic and Cordova modules.
+- platforms = resources for the final build.
+- plugins = cordova plugins.
+- resources = images.
+- www = creation of final packages.
+- src = main directory (app, assets, pages).
+
+
+
 
 
 
