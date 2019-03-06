@@ -1,5 +1,10 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Appareils</ion-title>
   </ion-navbar>
 </ion-header>
@@ -8,7 +13,11 @@
   <!--<button ion-button (click)="onLoadAppareil('Machine à laver')">Machine à laver</button>
   <button ion-button (click)="onLoadAppareil('Télévision')">Télévision</button>-->
   <ion-list>
-    <button ion-item *ngFor="let appareil of appareilsList" (click)="onLoadAppareil(appareil)">
+    <button ion-item
+            icon-start
+            *ngFor="let appareil of appareilsList; let i = index"
+            (click)="onLoadAppareil(i)">
+      <ion-icon name="power" [color]="appareil.isOn ? 'secondary' : 'danger'"></ion-icon>
       {{ appareil.name }}
     </button>
   </ion-list>
