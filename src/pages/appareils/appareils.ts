@@ -4,6 +4,7 @@ import {ModalController, MenuController} from "ionic-angular";
 import { SingleAppareilPage } from './single-appareil/single-appareil';
 import { Appareil } from '../../models/Appareil';
 import { AppareilsService } from '../../services/appareils.service';
+import { AppareilFormPage } from './appareil-form/appareil-form';
 
 @Component({
   selector: 'page-appareils',
@@ -22,7 +23,8 @@ export class AppareilsPage {
 
     constructor(private modalCtrl: ModalController,
                 private menuCtrl: MenuController,
-                private appareilsService: AppareilsService) {}
+                private appareilsService: AppareilsService,
+                private navCtrl: NavController) {}
 
     /* 2. En modal
     onLoadAppareil(appareil: {name: string, description: string[]}) {
@@ -44,4 +46,10 @@ export class AppareilsPage {
     onToggleMenu() {
         this.menuCtrl.open();
     }
+
+    onNewAppareil() {
+        this.navCtrl.push(AppareilFormPage);
+    }
+
+
 }

@@ -7,7 +7,6 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
   <ion-card [ngClass]="{'is-on': appareil.isOn, 'is-off': !appareil.isOn}">
     <ion-card-header>{{ appareil.name }}</ion-card-header>
@@ -32,5 +31,36 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+
+    <!-- formulaire permettant d'ajouter un appareil -->
+    <!-- Ajout d'une référence locale de type ngForm -->
+    <!-- Puis on lie la méthode de soumission du formulaire à ngSubmit et on ajoute la directive ngModel à chaque control -->
+    <form #f="ngForm" (ngSubmit)="onSubmitForm(f)">
+      <ion-list>
+        <ion-item>
+          <ion-label>Heure d'allumage</ion-label>
+          <!-- ion-datetime est un component ionic permettant à l'utilisateur de choisir une date et/ou une heure selon le format voulu -->
+          <ion-datetime displayFormat="HH:mm" name="startTime" [(ngModel)]="appareil.startTime"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Heure d'extinction</ion-label>
+          <ion-datetime displayFormat="HH:mm" name="endTime" [(ngModel)]="appareil.endTime"></ion-datetime>
+        </ion-item>
+      </ion-list>
+        <button type="button"
+                ion-button
+                full
+                color="danger"
+                (click)="onDeleteHours()">
+            Supprimer horaires
+        </button>
+        <button type="submit"
+                ion-button
+                full
+                color="secondary">
+            Enregistrer horaires
+        </button>
+    </form>
+
   </ion-card>
 </ion-content>

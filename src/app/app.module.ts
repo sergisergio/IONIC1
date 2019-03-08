@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { AppareilsPage } from '../pages/appareils/appareils';
 import { SingleAppareilPage } from '../pages/appareils/single-appareil/single-appareil';
 import { SettingsPage } from '../pages/settings/settings';
+import { AppareilFormPage } from '../pages/appareils/appareil-form/appareil-form';
 import { OptionsPage } from '../pages/options/options';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AppareilsService } from "../services/appareils.service";
@@ -21,7 +22,8 @@ import { AppareilsService } from "../services/appareils.service";
     SingleAppareilPage,
     SettingsPage,
     TabsPage,
-    OptionsPage
+    OptionsPage,
+    AppareilFormPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { AppareilsService } from "../services/appareils.service";
     SingleAppareilPage,
     SettingsPage,
     TabsPage,
-    OptionsPage
+    OptionsPage,
+    AppareilFormPage
   ],
   providers: [
     StatusBar,
