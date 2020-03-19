@@ -14,7 +14,9 @@ npm install -g ionic cordova
 
 [DOC ANGULAR](https://angular.io/)
 [DOC TYPESCRIPT](https://www.typescriptlang.org/docs/home.html)
-[DOC IONIC](https://raw.githubusercontent.com/sergisergio/IONIC1/master/ionic1.png)
+[DOC IONIC](https://ionicframework.com/docs/)
+
+![image](https://raw.githubusercontent.com/sergisergio/IONIC1/master/ionic1.png)
 
 ![image](https://raw.githubusercontent.com/sergisergio/IONIC1/master/ionic2.png)
 
